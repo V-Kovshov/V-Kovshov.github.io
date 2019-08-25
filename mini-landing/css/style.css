@@ -256,6 +256,10 @@ header {
 	overflow: hidden;
 }
 
+.slick-dots {
+	margin-top: 20px;
+}
+
 /* ABOUT */
 
 .heading {
