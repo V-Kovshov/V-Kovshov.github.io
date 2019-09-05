@@ -1,0 +1,83 @@
+.banner
+	background-image: linear-gradient(180deg, rgba(45, 51, 62, 0.45) 0%, rgba(255, 255, 255, 0) 100%), url('../img/banner.jpg')
+	background-repeat: no-repeat
+	background-position: center top
+	background-size: cover
+	position: relative
+	&-content
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		color: #fff
+		margin-top: 89px
+		a
+			display: inline-block
+			position: relative
+			background: linear-gradient(180deg, rgba(115, 189, 255, 0.95) 0%, rgba(96, 153, 246, 0.9) 100%)
+			box-shadow: 0px 15px 25px rgba(45, 51, 62, 0.04)
+			border-radius: 100px
+			color: #fff
+			padding: 15px 30px
+			font-size: 11px
+			line-height: 14px
+			letter-spacing: 0.1em
+			font-weight: 600
+			text-transform: uppercase
+			margin-bottom: 175px
+			z-index: 1
+			transition: all 0.3s
+			&:hover
+				background: linear-gradient(180deg, rgba(115, 189, 255, 0.7) 0%, rgba(96, 153, 246, 0.4) 100%)
+
+	&-title
+		font-family: Gilroy-Thin
+		font-weight: 100
+		font-size: 32px
+		line-height: 37px
+		letter-spacing: 0.05em
+		text-align: center
+		margin-bottom: 80px
+		span
+			display: block
+			font-family: Gilroy-Black
+			font-size: 56px
+			line-height: 70px
+			letter-spacing: 0.1em
+			text-transform: uppercase
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 247px
+		background-image: url(../img/cloud.png)
+		background-repeat: no-repeat
+		background-position: center top
+		background-size: cover
+
+.navigation
+	padding: 19px 0
+	// border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+
+.menu
+	display: flex
+	justify-content: space-between
+	font-family: 'Gilroy-SemiBold'
+	&-link
+		font-size: 14px
+		line-height: 17px
+		padding: 10px 25px
+		color: #fff
+		transition: all 0.3s
+		&:hover
+			background: rgba(255, 255, 255, .15)
+			backdrop-filter: blur(10px)
+			border-radius: 3px
+
+.hr
+	height: 1px
+	width: 100%
+	background-color: rgba(255, 255, 255, 0.15)
