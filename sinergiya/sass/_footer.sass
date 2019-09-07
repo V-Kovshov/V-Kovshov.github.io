@@ -1,5 +1,18 @@
 footer
 	background: #2D333E
+	.menu
+		display: flex
+		position: static
+		margin-top: 0
+		justify-content: space-between
+		flex-wrap: wrap
+		font-family: 'Gilroy-SemiBold'
+		background-color: transparent
+		&-link
+			font-size: 14px
+			line-height: 17px
+			padding: 10px 25px
+			color: #fff
 
 .copyright
 	font-family: Gilroy-Regular
@@ -8,3 +21,22 @@ footer
 	color: #5E697D
 	margin-top: 17px
 	padding-bottom: 11px
+
+
+@media screen and (max-width: 780px)
+	footer
+		.menu-link
+			font-size: 12px
+			line-height: 15px
+			padding: 5px 15px
+		.copyright
+			font-size: 12px
+
+@media screen and (max-width: 678px)
+	footer
+		.menu
+			padding: 0
+			&-link
+				font-size: 12px
+				line-height: 15px
+				padding: 0 15px

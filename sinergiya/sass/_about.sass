@@ -29,14 +29,14 @@
 		justify-content: space-between
 		margin-top: 62px
 	&-services
-		max-width: 510px
+		min-width: 510px
 		height: auto
 		margin-right: 30px
 		&__head
 			background: linear-gradient(120.47deg, #2EE99A 0%, #08AF69 100%)
 			background-image: url(../img/services.png)
 			background-repeat: no-repeat
-			background-position: 0 0
+			background-position: top right
 			border-radius: 5px
 			margin-bottom: 62px
 			&--title
@@ -46,13 +46,14 @@
 				text-transform: uppercase
 				color: #fff
 				padding-top: 60px
-				margin: 0 275px 12px 40px
+				margin: 0 0 12px 40px
 			&--desc
 				font-family: Gilroy-Regular
 				font-size: 14px
 				line-height: 135%
 				color: rgba(255, 255, 255, 0.7)
-				margin: 0 260px 82px 40px
+				margin: 0 0 82px 40px
+				max-width: 210px
 			&--btn
 				background-image: url(../img/arrow-right.png)
 				background-repeat: no-repeat
@@ -84,13 +85,13 @@
 				&:last-child
 					margin-bottom: 0
 	&-beautification
-		max-width: 510px
+		min-width: 510px
 		height: auto
 		&__head
 			background: linear-gradient(120.47deg, rgba(115, 189, 255, 0.95) 0%, #6099F6 100%)
 			background-image: url(../img/beautification.png)
 			background-repeat: no-repeat
-			background-position: -45px -34px
+			background-position: center top
 			border-radius: 5px
 			margin-bottom: 62px
 			&--title
@@ -100,13 +101,14 @@
 				text-transform: uppercase
 				color: #fff
 				padding-top: 60px
-				margin: 0 275px 12px 40px
+				margin: 0 0 12px 40px
 			&--desc
 				font-family: Gilroy-Regular
 				font-size: 14px
 				line-height: 135%
 				color: rgba(255, 255, 255, 0.7)
-				margin: 0 260px 82px 40px
+				margin: 0 0 82px 40px
+				max-width: 225px
 			&--btn
 				background-image: url(../img/arrow-right.png)
 				background-repeat: no-repeat
@@ -138,10 +140,7 @@
 				&:last-child
 					margin-bottom: 0
 
-#more
-	display: none
-
-#show-more
+.show-more
 	font-family: Gilroy-Black
 	font-size: 12px
 	line-height: 120%
@@ -155,3 +154,90 @@
 	margin-top: 46px
 	margin-bottom: 57px
 	margin-left: 22px
+
+
+@media screen and (max-width: 1099px)
+	.about-services,
+	.about-beautification
+		min-width: 490px
+
+@media screen and (max-width: 1056px)
+	.about-services,
+	.about-beautification
+		min-width: 450px
+
+@media screen and (max-width: 977px)
+	.about-title
+		font-size: 36px
+	.about-subtitle
+		font-size: 16px
+	.about-services,
+	.about-beautification
+		min-width: 425px
+	.about-services__list
+		font-size: 14px
+	.about-beautification__list
+		font-size: 14px
+	.show-more
+		font-size: 10px
+		background-position: 95px
+
+@media screen and (max-width: 925px)
+	.about-services,
+	.about-beautification
+		min-width: 400px
+	.about-services__head--title
+		font-size: 26px
+	.about-services__head--desc
+		max-width: 200px
+		font-size: 13px
+	.about-services__head--btn
+		background-position: 122px 0
+		a
+			font-size: 14px
+			padding-right: 35px
+	.about-beautification__head--title
+		font-size: 26px
+	.about-beautification__head--desc
+		font-size: 13px
+	.about-beautification__head--btn
+		background-position: 122px 0
+		a
+			font-size: 14px
+			padding-right: 35px
+
+@media screen and (max-width: 878px)
+	.about-title
+		font-size: 33px
+	.about-subtitle
+		font-size: 14px
+		width: 80%
+	.about-services,
+	.about-beautification
+		min-width: 320px
+	.about-services__head--btn
+		background-position: 105px 0
+		a
+			padding-right: 22px
+
+@media screen and (max-width: 715px)
+	.about-title
+		font-size: 28px
+	.about-subtitle
+		font-size: 12px
+	.about-desc
+		flex-direction: column
+		align-items: center
+	.about-services,
+	.about-beautification
+		max-width: 320px
+	.about-services
+		margin-right: 0
+	.about-services__head
+		margin-bottom: 50px
+	.about-services__list
+		font-size: 12px
+	.about-beautification__list
+		font-size: 12px
+	.about-beautification__head
+		margin-bottom: 50px

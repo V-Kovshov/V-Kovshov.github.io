@@ -7,12 +7,15 @@
 	margin-bottom: 17px
 
 .header-logo
-	width: 40%
+	max-width: 180px
+	img
+		width: 100%
 
 .contact-wrap
 	display: flex
 	justify-content: space-between
-	width: 60%
+	width: 40%
+	margin-left: 145px
 
 .contact-info
 	&__item
@@ -20,7 +23,6 @@
 		max-width: 180px
 		font-size: 18px
 		padding-left: 25px
-		margin-right: 20px
 		background-image: url(../img/phone.png)
 		background-repeat: no-repeat
 		background-position: -4px center
@@ -48,3 +50,87 @@
 	a
 		color: #2D333E
 		padding: 11px 25px
+
+
+@media screen and (max-width: 1024px)
+	.contact-info
+		&__item
+			font-size: 16px
+			span
+				font-size: 10px
+
+@media screen and (max-width: 925px)
+	.contact-wrap
+		margin-left: 105px
+	.contact-info
+		&__item
+			font-size: 14px
+			span
+				font-size: 8px
+	.order-call
+		font-size: 9px
+		a
+			padding: 9px 20px
+
+@media screen and (max-width: 780px)
+	.header-wrap
+		margin-top: 10px
+		margin-bottom: 10px
+	.contact-wrap
+		margin-left: 60px
+	.contact-info
+		&__item
+			font-size: 13px
+			margin-right: 20px
+			span
+				margin-bottom: 3px
+			&:last-child
+				margin-right: 0
+
+@media screen and (max-width: 740px)
+	.header-wrap
+		margin-top: 0
+		margin-bottom: 0
+	.contact-info
+		&__item
+			font-size: 12px
+			margin-right: 20px
+			&:last-child
+				margin-right: 0
+
+@media screen and (max-width: 679px)
+	.contact-wrap
+		flex-direction: column
+		align-items: center
+	.contact-info
+		&__item
+			font-size: 12px
+			margin-right: 0
+			margin-bottom: 5px
+			&:last-child
+				margin-bottom: 0
+
+@media screen and (max-width: 653px)
+	.contact-wrap
+		margin-left: 0
+
+@media screen and (max-width: 553px)
+	.contact-info
+		&__item
+			font-size: 10px
+			span
+				font-size: 6px
+	.order-call
+		font-size: 6px
+		a
+			padding: 6px 17px
+
+@media screen and (max-width: 420px)
+	.header-wrap
+		flex-direction: column
+	.contact-wrap
+		margin-bottom: 7px
+	.order-call
+		margin-bottom: 7px
+		a
+			padding: 5px 25px

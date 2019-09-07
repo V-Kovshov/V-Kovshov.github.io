@@ -1,9 +1,8 @@
 .banner
-	background-image: linear-gradient(180deg, rgba(45, 51, 62, 0.45) 0%, rgba(255, 255, 255, 0) 100%), url('../img/banner.jpg')
+	background-image: linear-gradient(180deg, rgba(45, 51, 62, 0.45) 0%, rgba(255, 255, 255, 0) 100%), url('../img/banner.png')
 	background-repeat: no-repeat
 	background-position: center top
-	background-size: contain
-	position: relative
+	background-size: cover
 	&-content
 		display: flex
 		justify-content: center
@@ -27,8 +26,6 @@
 			margin-bottom: 175px
 			z-index: 1
 			transition: all 0.3s
-			&:hover
-				background: linear-gradient(180deg, rgba(115, 189, 255, 0.7) 0%, rgba(96, 153, 246, 0.4) 100%)
 
 	&-title
 		font-family: Gilroy-Thin
@@ -48,22 +45,12 @@
 			text-transform: uppercase
 			&:last-child
 				margin-top: 0
-	&:after
-		content: ''
-		display: block
-		position: absolute
-		bottom: 0
-		left: 0
-		right: 0
-		height: 247px
-		background-image: url(../img/cloud.png)
-		background-repeat: no-repeat
-		background-position: center top
-		background-size: cover
 
 .navigation
 	padding: 19px 0
-	// border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+
+.menu-toggle
+	display: none
 
 .menu
 	display: flex
@@ -84,3 +71,126 @@
 	height: 1px
 	width: 100%
 	background-color: rgba(255, 255, 255, 0.15)
+
+
+@media screen and (max-width: 1024px)
+	.banner-title
+		font-size: 30px
+		margin-bottom: 65px
+		span
+			font-size: 50px
+			margin-top: 30px
+			&:last-child
+				margin-top: 0
+	.banner-content
+		a
+			margin-bottom: 160px
+
+@media screen and (max-width: 925px)
+	.banner-title
+		font-size: 28px
+		line-height: 37px
+		span
+			font-size: 45px
+			margin-top: 25px
+			line-height: 60px
+			&:last-child
+				margin-top: 0
+	.banner-content
+		a
+			font-size: 10px
+
+@media screen and (max-width: 825px)
+	.banner-title
+		font-size: 23px
+		line-height: 37px
+		span
+			font-size: 35px
+			margin-top: 20px
+			line-height: 55px
+			&:last-child
+				margin-top: 0
+	.banner-content
+		a
+			font-size: 9px
+			padding: 10px 25px
+
+@media screen and (max-width: 740px)
+	.banner-title
+		font-size: 20px
+		line-height: 35px
+		span
+			font-size: 30px
+			margin-top: 17px
+			line-height: 50px
+			&:last-child
+				margin-top: 0
+	.banner-content
+		a
+			font-size: 8px
+	.navigation
+		padding: 13px 0
+	.menu-link
+		font-size: 12px
+
+@media screen and (max-width: 679px)
+	.navigation
+		position: relative
+		text-align: center
+	.menu-toggle
+		display: inline-block
+		border: none
+		background-color: transparent
+		padding: 0
+		width: 37px
+		span
+			display: block
+			height: 3px
+			background: #fff
+			& + span
+				margin-top: 8px
+	.menu
+		display: none
+		position: absolute
+		top: 100%
+		right: 0
+		left: 0
+		min-width: 200px
+		margin-top: 20px
+		padding: 10px 0
+		background: rgba(0, 0, 0, .9)
+		text-align: center
+		z-index: 2
+	.banner-content
+		margin-top: 45px
+
+@media screen and (max-width: 653px)
+	.banner-title
+		font-size: 20px
+		line-height: 30px
+		span
+			font-size: 30px
+			margin-top: 15px
+			line-height: 45px
+			&:last-child
+				margin-top: 0
+	.banner-content
+		a
+			margin-bottom: 100px
+
+@media screen and (max-width: 555px)
+	.banner-title
+		font-size: 15px
+		span
+			font-size: 20px
+			line-height: 35px
+	.banner-content
+		a
+			font-size: 7px
+			padding: 7px 20px
+
+@media screen and (max-width: 420px)
+	.menu-toggle
+		width: 30px
+		span
+			height: 2px
