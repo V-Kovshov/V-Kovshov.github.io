@@ -1,3 +1,4 @@
+
 function testWebP(callback) {
 
     var webP = new Image();
@@ -40,3 +41,26 @@ $slider.slick({
 });
 
 setProgress(0);
+
+$(document).ready(function () {
+    $('.admission-slider').slick({
+        slidesToShow: 5,
+        prevArrow: '<button type="submit" class="admission-prev slick-prev">Назад</button>',
+        nextArrow: '<button type="submit" class="admission-next slick-next">Далее</button>',
+        infinite: false,
+        dots: true,
+        adaptiveHeight: true,
+    });
+
+    $('.admission-tab__link').click(function (e) {
+        e.preventDefault();
+
+        $('.admission-tab__link').removeClass('admission-tab__active');
+        $('.admission-slider').removeClass('admission-slider__active');
+
+        $(this).addClass('admission-tab__active');
+        $($(this).attr('href')).addClass('admission-slider__active')
+    });
+
+    $('.admission-tab__link:first').click();
+});

@@ -351,6 +351,15 @@ hr {
   transform: translate3d(0, 0, 0);
 }
 
+.slick-slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .slick-track {
   position: relative;
   left: 0;
@@ -413,6 +422,47 @@ hr {
 
 .slick-arrow.slick-hidden {
   display: none;
+}
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 55px;
+}
+
+.slick-dots li {
+  width: 9px;
+  height: 9px;
+  background-color: #000000;
+  opacity: 0.4;
+  list-style: none;
+  margin-right: 15px;
+}
+
+.slick-dots li:last-child {
+  margin-right: 0;
+}
+
+.slick-dots li:hover {
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  font-size: 0;
+}
+
+.slick-dots .slick-active {
+  width: 33px;
+  height: 9px;
+  background-color: #e30a17;
+  opacity: 1;
 }
 
 * {
@@ -668,7 +718,7 @@ h6 {
   background-color: transparent;
 }
 
-.slick-next {
+.slick-btn.slick-next {
   left: 315px;
 }
 
@@ -761,6 +811,10 @@ h6 {
   line-height: 23px;
 }
 
+.admission-wrap {
+  position: relative;
+}
+
 .admission__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -771,6 +825,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 55px;
 }
 
 .admission__desc {
@@ -818,6 +873,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 165px;
 }
 
 .admission__link a {
@@ -832,11 +888,21 @@ h6 {
 }
 
 .admission__btn {
-  margin-left: 30px;
   position: relative;
 }
 
-.admission__btn button {
+.admission__btn::after {
+  content: '';
+  background-color: #999999;
+  height: 17px;
+  width: 2px;
+  top: calc(50% - 6.5px);
+  left: 103px;
+  position: absolute;
+}
+
+.admission .admission-prev,
+.admission .admission-next {
   color: #000000;
   background-color: transparent;
   font-family: "Manrope";
@@ -846,25 +912,191 @@ h6 {
   line-height: 23px;
   border: none;
   cursor: pointer;
+  position: absolute;
 }
 
-.admission__btn.slick-disabled {
+.admission .admission-prev.slick-disabled,
+.admission .admission-next.slick-disabled {
   cursor: default;
   opacity: 0.4;
 }
 
-.admission__btn::after {
-  content: '';
-  background-color: #999999;
-  height: 17px;
-  width: 2px;
-  top: calc(50% - 6.5px);
-  left: 60px;
-  position: absolute;
-}
-
 .admission .admission-prev {
   margin-right: 30px;
+  top: -80px;
+  right: 50px;
+}
+
+.admission .admission-next {
+  top: -80px;
+  right: 0;
+}
+
+.admission-tab__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 3px;
+  left: calc(50% - 230.5px);
+}
+
+.admission-tab__link {
+  opacity: 0.4;
+  color: #000000;
+  font-family: "Manrope";
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.97px;
+  line-height: 23px;
+  margin-right: 40px;
+}
+
+.admission-tab__link:last-child {
+  margin-right: 0;
+}
+
+.admission-tab__active {
+  opacity: 1;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e30a17;
+}
+
+.admission-slider {
+  display: none;
+}
+
+.admission-slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 260px;
+}
+
+.admission-slider__title {
+  color: #232323;
+  font-family: "Manrope";
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  line-height: 23px;
+  margin: 10px 0 5px 0;
+}
+
+.admission-slider__price {
+  color: #232323;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.admission-slider__price span {
+  opacity: 0.4;
+  font-size: 15px;
+  font-weight: 600;
+  position: relative;
+}
+
+.admission-slider__price span::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: 70px;
+  background-color: #232323;
+  opacity: 0.4;
+}
+
+.admission-slider__active {
+  display: block;
+}
+
+.admission-img {
+  position: relative;
+  width: 260px;
+  border: 1px solid #e8e8e8;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 348px;
+          flex: 1 0 348px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.admission-img__label {
+  display: inline-block;
+  color: #ffffff;
+  font-family: "Manrope";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 23px;
+  padding: 2px 15px 2px 7px;
+  position: absolute;
+  top: -15px;
+  left: 25px;
+}
+
+.admission-img__farorites {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.admission-img__comparison {
+  display: none;
+  position: absolute;
+  top: 55px;
+  right: 20px;
+}
+
+.admission-img:hover .admission-btn,
+.admission-img:hover .admission-img__comparison {
+  display: block;
+}
+
+.discount {
+  background-color: #e30a17;
+}
+
+.news {
+  background-color: #4aa48f;
+  display: none;
+}
+
+.admission-btn {
+  color: #ffffff;
+  font-family: "Manrope";
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.97px;
+  line-height: 23px;
+  -webkit-box-shadow: 0 2px 12px rgba(227, 10, 23, 0.5);
+          box-shadow: 0 2px 12px rgba(227, 10, 23, 0.5);
+  background-color: #e30a17;
+  padding: 15px 78px;
+  position: absolute;
+  bottom: 10px;
+  display: none;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .webp .nav-left__item:last-child .nav-item__link::after { background-image: url(../img/header/dropdown.webp); }
