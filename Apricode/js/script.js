@@ -63,4 +63,8 @@ $(document).ready(function () {
     });
 
     $('.admission-tab__link:first').click();
+
+    // $(".dropdown-btn").click(function () {
+    //     $(".hidden-text").slideToggle("slow");
+    // });
 });
